@@ -3,7 +3,7 @@
 
 ## Description 
 
-AnimalCrossing is a sample R package demonstrating how C++ classes defined using Rcpp Modules can be exposed to R and used polymorphically from both C++ and R. The package shows how multiple C++ classes deriving from a common base class can be passed to C++ functions through a shared interface, and how objects defined in R can be mapped to the same C++ base class via callback methods.
+`AnimalCrossing` is a sample R package demonstrating how C++ classes defined using `Rcpp` modules can be exposed to R and used polymorphically from both C++ and R. The package shows how multiple C++ classes deriving from a common base class can be passed to C++  functions through a shared interface, and how objects defined in R can be mapped to the same C++ base class via callback methods.
 
 This package is intended for demonstration and educational purposes only.
 
@@ -59,13 +59,13 @@ print_animal(moth)
 Connie is a moth and they are 1 year old
 ```
 
-## Advanced application: Binary segmentation with 2 segments
+## Advanced application: Binary segmentation with two segments
 
 In addition to the `Animal` example, the `AnimalCrossing` package also demonstrates how the same polymorphic design pattern can be applied to **algorithmic code**. In particular, the package includes a minimal implementation of **binary segmentation with a single change point (two segments)**.
 
 ### Cost abstraction
 
-Binary segmentation is implemented in `C++` via a class `BinarySegmentation`, which depends only on an abstract base class `CostBase`. The `CostBase` interface exposes a single method
+Binary segmentation is implemented in C++ via a class `BinarySegmentation`, which depends only on an abstract base class `CostBase`. The `CostBase` interface exposes a single method
 
 ```cpp
 double eval(int start, int end) const;
@@ -73,11 +73,11 @@ double eval(int start, int end) const;
 
 which computes the cost of a segment covering indices `[start, end)`.
 
-Crucially, `BinarySegmentation` is written entirely in terms of `CostBase`, and therefore does not depend on how the cost is implemented. This mirrors the earlier `Animal` example, where `C++` functions operate on the abstract `Animal` base class rather than concrete subclasses.
+Crucially, `BinarySegmentation` is written entirely in terms of `CostBase`, and therefore does not depend on how the cost is implemented. This mirrors the earlier `Animal` example, where C++ functions operate on the abstract `Animal` base class rather than concrete subclasses.
 
 ### Native `CostL2` class
 
-The package provides a native `C++` implementation of the L2 (sum-of-squares) cost via the class `CostL2`. This class precomputes cumulative sums internally, so that each call to `$eval(start, end)` runs in constant time.
+The package provides a native C++ implementation of the L2 (sum-of-squares) cost via the class `CostL2`. This class precomputes cumulative sums internally, so that each call to `$eval(start, end)` runs in constant time.
 
 ```r
 library("AnimalCrossing")
