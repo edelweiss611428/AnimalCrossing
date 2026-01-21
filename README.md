@@ -137,5 +137,5 @@ This example illustrates the key design principle promoted by the package:
 
 > Algorithms should depend on abstract interfaces, not concrete implementations.
 
-By using Rcpp Modules and polymorphic base classes, the same C++ algorithm can operate seamlessly on: high-performance C++ cost functions, and flexible, user-defined R cost functions, exactly as the earlier `Animal` example allows both C++ and R-defined animals to be treated uniformly.
+By using Rcpp modules and polymorphic base classes, the same C++ algorithm can operate seamlessly on: high-performance C++ cost functions, and flexible, user-defined R cost functions, exactly as the earlier `Animal` example allows both C++ and R-defined animals to be treated uniformly.
 
