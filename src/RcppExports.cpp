@@ -22,10 +22,12 @@ END_RCPP
 }
 
 RcppExport SEXP _rcpp_module_boot_animal_module();
+RcppExport SEXP _rcpp_module_boot_binseg_module();
 
 static const R_CallMethodDef CallEntries[] = {
     {"_AnimalCrossing_print_animal", (DL_FUNC) &_AnimalCrossing_print_animal, 1},
     {"_rcpp_module_boot_animal_module", (DL_FUNC) &_rcpp_module_boot_animal_module, 0},
+    {"_rcpp_module_boot_binseg_module", (DL_FUNC) &_rcpp_module_boot_binseg_module, 0},
     {NULL, NULL, 0}
 };
 

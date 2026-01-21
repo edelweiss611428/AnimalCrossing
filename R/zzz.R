@@ -6,5 +6,6 @@
 
 .onLoad <- function(libname, pkgname) {
   Rcpp::loadModule("animal_module", TRUE)
+  Rcpp::loadModule("binseg_module", TRUE)
 }
 

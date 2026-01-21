@@ -28,3 +28,22 @@ print_animal <- function(animalSEXP) {
     invisible(.Call(`_AnimalCrossing_print_animal`, animalSEXP))
 }
 
+#' @name CostBase
+#' @title Base cost class
+NULL
+
+#' @name CostL2
+#' @title L2 cost (fast, prefix sums)
+#' @export
+NULL
+
+#' @name RCostClass
+#' @title R-defined cost
+#' @export
+NULL
+
+#' @name BinarySegmentation
+#' @title Binary segmentation (single split)
+#' @export
+NULL
+
