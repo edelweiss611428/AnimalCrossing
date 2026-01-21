@@ -82,6 +82,7 @@ The package provides a native C++ implementation of the L2 (sum-of-squares) cost
 ```r
 library("AnimalCrossing")
 
+set.seed(1)
 x <- c(rnorm(10, 0), rnorm(10, 5))
 n <- length(x)
 
@@ -127,7 +128,7 @@ binSeg2Cps_R$predict(0L, n)
 Both approaches—native C++ costs and R-defined costs—can be passed to the same `BinarySegmentation class`, without any changes to the segmentation code.
 
 ```
-Change point in [0, 20) at 10 | gain = 105.475
+Change point in [0, 20) at 10 | gain = 130.9
 [1] 10
 ```
 
