@@ -24,7 +24,12 @@ The following examples show both native C++ animals and R-defined animals being 
 library("AnimalCrossing")
 duck <- new(Duck, "Aquaduck", 10)
 print_animal(duck)
+```
+```
+Aquaduck is a duck and they are 1 year old
+```
 
+```r
 moth <- new(
   RAnimal,
   type = function() "moth",
@@ -33,4 +38,8 @@ moth <- new(
 )
 
 print_animal(moth)
+```
+
+```
+Connie is a moth and they are 1 year old
 ```
