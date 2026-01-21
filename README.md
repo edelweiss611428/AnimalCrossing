@@ -13,7 +13,7 @@ This package is intended for demonstration and educational purposes only.
 To install the newest version of the package, use the following R code: 
 
 ```r
-library(devtools)
+library("devtools")
 install_github("edelweiss611428/AnimalCrossing") 
 ```
 
@@ -35,8 +35,6 @@ In addition, the package provides a special C++ subclass `RAnimal`, which allows
 The following examples show both native C++ animals and R-defined animals being passed to the same C++ function.
 
 ```r
-library("AnimalCrossing")
-
 duck <- new(Duck, "Aquaduck", 10)
 print_animal(duck)
 ```
@@ -80,8 +78,6 @@ Crucially, `BinarySegmentation` is written entirely in terms of `CostBase`, and 
 The package provides a native C++ implementation of the L2 (sum-of-squares) cost via the class `CostL2`. This class precomputes cumulative sums internally, so that each call to `$eval(start, end)` runs in constant time.
 
 ```r
-library("AnimalCrossing")
-
 set.seed(1)
 x <- c(rnorm(10, 0), rnorm(10, 5))
 n <- length(x)
