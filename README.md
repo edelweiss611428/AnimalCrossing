@@ -28,7 +28,7 @@ The package defines a C++ base class `Animal`. An `Animal` object is defined by 
 
 Two native C++ subclasses, `Duck` and `Dog`, are provided. These subclasses automatically set the `type` argument (to `"duck"` or `"dog"`) and require only `name` and `age` when constructed in R.
 
-In addition, the package provides a special C++ class `RAnimal`, which allows users to define new animals directly in R by supplying callback functions for `type`, `name`, and `age`. These R-defined objects can be passed to C++ functions anywhere an `Animal` object is expected.
+In addition, the package provides a special C++ subclass `RAnimal`, which allows users to define new animals directly in R by supplying callback functions for `type`, `name`, and `age`. These R-defined objects can be passed to C++ functions anywhere an `Animal` object is expected.
 
 ### Sample usage
 
@@ -95,7 +95,7 @@ binSeg2Cps_Cpp$predict(0L, n)
 ### R-defined cost via callbacks: `RCostClass`
 
 
-To allow rapid prototyping and user-defined costs, the package also provides the class `RCostClass`. This class wraps an R function of the form:
+To allow rapid prototyping and user-defined costs, the package also provides the subclass `RCostClass`. This class wraps an R function of the form:
 
 ```r
 function(start, end) -> numeric(1)
