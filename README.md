@@ -1,8 +1,22 @@
 # AnimalCrossing
 
+
+## Description 
+
 AnimalCrossing is a sample R package demonstrating how C++ classes defined using Rcpp Modules can be exposed to R and used polymorphically from both C++ and R. The package shows how multiple C++ classes deriving from a common base class can be passed to C++ functions through a shared interface, and how objects defined in R can be mapped to the same C++ base class via callback methods.
 
 This package is intended for demonstration and educational purposes only.
+
+
+## Installation
+
+To install the newest version of the package, use the following R code: 
+
+```r
+library(devtools)
+install_github("edelweiss611428/AnimalCrossing") 
+```
+
 
 ## Toy example: `Animal`
 
@@ -22,6 +36,7 @@ The following examples show both native C++ animals and R-defined animals being 
 
 ```r
 library("AnimalCrossing")
+
 duck <- new(Duck, "Aquaduck", 10)
 print_animal(duck)
 ```
@@ -74,8 +89,6 @@ CostL2Module_Cpp <- new(CostL2, x)
 binSeg2Cps_Cpp   <- new(BinarySegmentation, CostL2Module_Cpp)
 
 binSeg2Cps_Cpp$predict(0L, n)
-
-
 ```
 
 
