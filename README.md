@@ -4,7 +4,7 @@ AnimalCrossing is a sample R package demonstrating how C++ classes defined using
 
 This package is intended for demonstration and educational purposes only.
 
-## Description
+## Toy example: `Animal`
 
 The package defines a C++ base class `Animal`. An `Animal` object is defined by three arguments:
 
@@ -16,7 +16,7 @@ Two native C++ subclasses, `Duck` and `Dog`, are provided. These subclasses auto
 
 In addition, the package provides a special C++ class `RAnimal`, which allows users to define new animals directly in R by supplying callback functions for `type`, `name`, and `age`. These R-defined objects can be passed to C++ functions anywhere an `Animal` object is expected.
 
-## Sample usage
+### Sample usage
 
 The following examples show both native C++ animals and R-defined animals being passed to the same C++ function.
 
@@ -44,7 +44,7 @@ print_animal(moth)
 Connie is a moth and they are 1 year old
 ```
 
-## Advanced application: Binary Segmentation with 2 segments
+## Advanced application: Binary segmentation with 2 segments
 
 In addition to the `Animal` example, the `AnimalCrossing` package also demonstrates how the same polymorphic design pattern can be applied to **algorithmic code**. In particular, the package includes a minimal implementation of **binary segmentation with a single change point (two segments)**.
 
