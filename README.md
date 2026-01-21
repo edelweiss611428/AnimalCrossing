@@ -39,7 +39,7 @@ duck <- new(Duck, "Aquaduck", 10)
 print_animal(duck)
 ```
 ```
-Aquaduck is a duck and they are 1 year old
+Aquaduck is a duck and they are 10 year old
 ```
 
 ```r
